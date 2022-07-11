@@ -37,10 +37,10 @@ for _ in range(N):
         else:
             q_b=que
             print(q_b.get())
-
-print(que.qsize())'''
-
-from sys import stdin
+'''
+#print(que.qsize())
+#########
+'''from sys import stdin
 input()
 s, com= [], stdin.readlines()
 cnt = 0
@@ -66,4 +66,40 @@ for x in com:
         else: print(-1)
     elif c[0] == 'back':
         if len(s) > cnt: print(s[-1])
-        else: print(-1)
+        else: print(-1)'''
+
+from collections import deque
+import sys
+
+input = sys.stdin.readline
+
+n = int(input())
+
+q = deque([]) #리스트 구현
+
+for _ in range(n):
+    query = input().split()
+    if query[0] == 'push':
+            q.append(query[1]) #푸쉬 다음 숫자를 추가
+    elif query[0] == 'pop':
+        if len(q):
+            print(q.popleft()) # 선입 선출로 앞에 숫자 뽑아오기
+        else:
+            print(-1) # 아니면 -1 출력
+    elif query[0] == 'size':
+        print(len(q)) # 크기 출력
+    elif query[0] == 'empty':
+        if len(q): #크기 측정이 가능하면 0 
+            print(0)
+        else:
+            print(1) # 아니면 1
+    elif query[0] == 'front':
+        if len(q):
+            print(q[0])
+        else:
+            print(-1)
+    elif query[0] == 'back':
+        if len(q):
+            print(q[-1])
+        else:
+            print(-1)
