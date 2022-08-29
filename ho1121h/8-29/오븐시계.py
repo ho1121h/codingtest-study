@@ -1,6 +1,6 @@
 h, m = map(int,input().split())
 t = int(input())
-
+# https://www.acmicpc.net/problem/2525
 ## 요리에 필요한 시간을 더하기
 h += t //60
 m += t % 60
