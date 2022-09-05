@@ -9,7 +9,7 @@ math = input().split("-") # 먼저 - 기준으로 스플릿을 함
 math_plus = math[0].split("+") # 왼쪽값은 무조건 양수이기도하고, 만약 전부 + 연산인 경우 + 로 스플릿함
 
 # print(math) : 55, 50+40
-# print(math_1) :55
+# print(math_plus) :55
 
 result = 0
 
