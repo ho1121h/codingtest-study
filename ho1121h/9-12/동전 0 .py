@@ -9,13 +9,14 @@ N , K = map(int, input().split())
 for _ in range(N):
     
     A = int(input())
-    if A < K :
-        동전.append(A) # 목표값 미만은 제외
-
+    # if A < K :
+    #     동전.append(A) # 목표값 미만은 제외
+    동전.append(A)
 동전 = sorted( 동전, reverse=True) # 정렬 됨
 
 for i in 동전 :
-    while i <= K : # 뺄 수 있는 최대값 동전으로 빼기 시작해서 소거
-            K -= i
-            최소값 += 1
+    if K == 0:
+        break
+    최소값 += K//i
+    K %= i
 print(최소값)
