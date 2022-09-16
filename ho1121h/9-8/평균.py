@@ -11,7 +11,7 @@ N_list = list(map(int,input().split()))
 M = max(N_list)
 
 
-# for i in N_list:
+# for i in N_list: 이방법은 아닌듯
 #     if i != M:
         
 #         N_list2.append(int(i)) 

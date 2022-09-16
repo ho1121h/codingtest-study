@@ -9,15 +9,15 @@ word = input().strip() # 개행 문자땜시 스트립 추가
 
 word = word.lower()
 # print(list(set(word)))
-word2 = list(set(word))
+word2 = list(set(word)) # 중복 제거 
 
 # max를 쓰면 간단히 나오지만 max가 여러개일 경우인 경우 ?를 출력하기위해 사용
-cnt = []
+cnt = [] # 단어 갯수를 담기위한 리스트
 for i in word2 :
     # print(i)
     count = word.count(i)
     # print(count)
-    cnt.append(count)
+    cnt.append(count) # 각 인덱스에 단어 갯수가 저장됨
 # print(cnt.count(max(cnt)))
 
 if cnt.count(max(cnt)) >=2 : # max(cnt) 가 2개 이상이라면 ? 출력
