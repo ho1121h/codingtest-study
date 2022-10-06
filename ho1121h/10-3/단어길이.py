@@ -1,1 +1,1 @@
-print(len(input()))
+print(10%10)
